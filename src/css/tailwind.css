@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+.rtl {
+    direction: rtl;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer base {
+    html {
+        direction: rtl;
+    }
+
+    body {
+        font-family: 'Vazir', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+        line-height: 1.8;
+    }
+}
+
+
+.pagination-wrapper ul {
+    @apply flex flex-wrap justify-center items-center gap-2;
+}
+
+.pagination-wrapper li {
+    list-style: none;
+}
+
+.pagination-wrapper a,
+.pagination-wrapper span {
+    @apply min-w-[36px] h-9 px-3 flex items-center justify-center
+    text-sm rounded-md border border-gray-200
+    text-gray-700 bg-white
+    transition hover:bg-gray-100;
+}
+
+.pagination-wrapper .current {
+    @apply bg-blue-600 text-white border-blue-600 font-semibold;
+}
+
+.pagination-wrapper .prev,
+.pagination-wrapper .next {
+    @apply font-medium;
+}
+
+.pagination-wrapper a:hover {
+    @apply bg-gray-100;
+}
+
+input[type="search"],
+input[type="search"]:hover,
+input[type="search"]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+footer a { text-decoration: none; }
+body {
+    background-color: #f3f3f3;
+}
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 13px;
+    line-height: 1.8;
+    color: #6b7280;
+}
+
+.breadcrumb a {
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: #2563eb;
+}
+
+
+.breadcrumb .current,
+.breadcrumb span:last-child {
+    color: #111827;
+    font-weight: 500;
+}
+
+.breadcrumb .separator,
+.breadcrumb li::before {
+    content: " ";
+    margin: 0 6px;
+    color: #9ca3af;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:first-child::before {
+    content: none;
+}
