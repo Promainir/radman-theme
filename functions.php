@@ -501,4 +501,10 @@ $themeUpdateChecker = PucFactory::buildUpdateChecker(
         'radman-theme'
 );
 
+// branch
 $themeUpdateChecker->setBranch('master');
+
+// 🔐 احراز هویت برای ریپوی private
+$themeUpdateChecker->setAuthentication('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');
+
+
