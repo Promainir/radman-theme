@@ -491,3 +491,14 @@ add_shortcode('backlinks', function () {
 });
 
 
+require_once __DIR__ . '/vendor/plugin-update-checker/plugin-update-checker.php';
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$themeUpdateChecker = PucFactory::buildUpdateChecker(
+        'https://github.com/Promainir/radman-theme',
+        __FILE__,
+        'radman-theme'
+);
+
+$themeUpdateChecker->setBranch('master');
